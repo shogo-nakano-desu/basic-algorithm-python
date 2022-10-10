@@ -13,15 +13,8 @@ class InsertionSort {
   static <E extends Comparable<? super E>> void sort(E[] A) {
     for (int i = 1; i < A.length; i++) {
       for (int j = i; (j > 0) && (A[j].compareTo(A[j - 1]) < 0); j--) {
-        swap(A, j, j - 1);
+        Util.swap(A, j, j - 1);
       }
     }
   }
-
-  public static <E> void swap(E[] A, int p1, int p2) {
-    E temp = A[p1];
-    A[p1] = A[p2];
-    A[p2] = temp;
-  }
-
 }
